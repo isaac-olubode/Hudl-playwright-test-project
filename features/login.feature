@@ -13,14 +13,14 @@ Feature: User Login
     Examples:
 
       | email                    | password             | outcome                                       |
-      | isaac.olubode@gmail.com  | Purple2020 | Login is Successful                         |
+      | EnterAValidEmailAddress    | EnterValidPasswordHere | Login is Successful                         |
 
   Scenario: Unsuccessful login with incorrect password
     When the user enters an invalid "<email>" and "<password>"
     Then the "<outcome>" should occur
     Examples:
       | email                    | password             | outcome                                       |
-      | isaac.olubode@gmail.com  | IncorrectPassword    | Incorrect password error                      |
+      | EnterAValidEmailAddress  | IncorrectPassword    | Incorrect password error                      |
 
   Scenario: Unsuccessful login with invalid Email format
     When the user enters an invalid email address "<email>"
